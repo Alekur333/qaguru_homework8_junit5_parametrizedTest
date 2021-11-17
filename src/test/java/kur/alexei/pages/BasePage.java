@@ -2,7 +2,9 @@ package kur.alexei.pages;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Attachment;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -14,6 +16,7 @@ public class BasePage {
     public static void beforeTest() {
 
         Configuration.browserSize="1200x800";
+        SelenideLogger.addListener("allure", new AllureSelenide());
 
     }
 

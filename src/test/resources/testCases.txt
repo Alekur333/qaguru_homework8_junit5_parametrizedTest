@@ -1,0 +1,11 @@
+Проверка соотвествия заголовка блока holiday-2021 главной страницы выбранному языку
+
+Steps:
+1. Открыть страницу https://www.apple.com на выбранном языук
+2. Найти заголовок в блоке holiday-2021
+3. Проверить, что заголовок соотвествует языку страницы
+
+Expected result:
+it - "Regala un Natale meraviglioso a tutte e tutti.";
+fr - "Cette année, tout le monde est de la fête.";
+de - "Mach Weihnachten zum Fest für alle."
