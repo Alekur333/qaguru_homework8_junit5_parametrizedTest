@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AppleLanguagesTest extends BasePage {
 
     TestData testData = new TestData();
-    SelenideElement headline = $("div[data-unit-id=\"holiday-2021\"] .headline");
+    SelenideElement headline = $("[data-unit-id='holiday-2021'] .headline");
 
     @ValueSource(strings = {"it", "fr"})
     @ParameterizedTest(name = "Страница есть на языке {0}")
@@ -29,7 +29,6 @@ public class AppleLanguagesTest extends BasePage {
 
         open(testData.startUrl + localUrlEnd);
         assertThat(url()).contains(localUrlEnd);
-        takeScreenshot();
     }
 
     @CsvSource(
@@ -46,7 +45,6 @@ public class AppleLanguagesTest extends BasePage {
         open(testData.startUrl + localUrlEnd);
         headline.shouldBe(visible);
         headline.shouldHave(text(headingsText));
-        takeScreenshot();
     }
 
     static Stream<Arguments> holiday2021HeadingsLanguageMethodSourceTest() {
@@ -65,6 +63,5 @@ public class AppleLanguagesTest extends BasePage {
         open(testData.startUrl + localUrlEnd);
         headline.shouldBe(visible);
         headline.shouldHave(text(headingsText));
-        takeScreenshot();
     }
 }
