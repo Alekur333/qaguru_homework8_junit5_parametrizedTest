@@ -65,3 +65,5 @@ public class AppleLanguagesTest extends BasePage {
         headline.shouldHave(text(headingsText));
     }
 }
+
+
